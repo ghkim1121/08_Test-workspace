@@ -4,6 +4,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.kh.spring.member.model.vo.Member;
 
@@ -27,5 +28,30 @@ public class MemberController {
 		
 		return "redirect:/";
 	}
-
+	
+	// 가현 - 240528
+	// 회원가입 메소드
+	@RequestMapping("insert.me")
+	public ModelAndView insertMember(Member m,
+									 ModelAndView mv) {
+		
+		mv.setViewName("redirect:/");
+		
+		return mv;
+	}
+	
+	// 가현 - 240528
+	// 마이페이지 메소드
+	public String myPage() {
+		
+		return "member/myPage";
+	}
+	
+	
 }
+
+
+
+
+
+
