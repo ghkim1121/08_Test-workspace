@@ -4,6 +4,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.kh.spring.member.model.vo.Member;
 
@@ -26,6 +27,22 @@ public class MemberController {
 		session.invalidate();
 		
 		return "redirect:/";
+	}
+	
+	// 무진 - 240529
+	// 회원탈퇴 메소드
+	public String deleteMember(String userId, String userPwd) {
+		
+		return "redirect:/";
+	}
+	
+	// 무진 - 240529
+	// 아이디 중복체크 메소드
+	@ResponseBody
+	@RequestMapping(value="idCheck.me", produces="text/html; charset=UTF-8")
+	public String idCheck() {
+		
+		return "체크값";
 	}
 
 }
