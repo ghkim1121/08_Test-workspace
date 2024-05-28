@@ -4,7 +4,11 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+<<<<<<< HEAD
 import org.springframework.web.bind.annotation.ResponseBody;
+=======
+import org.springframework.web.servlet.ModelAndView;
+>>>>>>> 6f5081885bf702f77d2e3873954c4bac8791f257
 
 import com.kh.spring.member.model.vo.Member;
 
@@ -45,4 +49,29 @@ public class MemberController {
 		return "체크값";
 	}
 
+	// 가현 - 240528
+	// 회원가입 메소드
+	@RequestMapping("insert.me")
+	public ModelAndView insertMember(Member m,
+									 ModelAndView mv) {
+		
+		mv.setViewName("redirect:/");
+		
+		return mv;
+	}
+	
+	// 가현 - 240528
+	// 마이페이지 메소드
+	public String myPage() {
+		
+		return "member/myPage";
+	}
+	
+	
 }
+
+
+
+
+
+
