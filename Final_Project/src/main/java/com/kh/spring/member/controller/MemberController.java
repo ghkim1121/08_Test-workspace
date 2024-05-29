@@ -4,11 +4,11 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-<<<<<<< HEAD
+
 import org.springframework.web.bind.annotation.ResponseBody;
-=======
+
 import org.springframework.web.servlet.ModelAndView;
->>>>>>> 6f5081885bf702f77d2e3873954c4bac8791f257
+
 
 import com.kh.spring.member.model.vo.Member;
 
